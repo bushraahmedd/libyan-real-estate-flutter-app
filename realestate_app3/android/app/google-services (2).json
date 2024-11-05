@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "133487521885",
+    "project_id": "realestae-2app",
+    "storage_bucket": "realestae-2app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133487521885:android:69eecc9663ef7bc8b85db4",
+        "android_client_info": {
+          "package_name": "akarie.come.demo2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfhAUdancOSXHp4jGFHsdGWzjzMsGZT1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

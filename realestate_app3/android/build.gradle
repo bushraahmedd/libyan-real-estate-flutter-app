@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2' // Latest stable version as of now
+        classpath 'com.google.gms:google-services:4.3.10' // Google services plugin
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.8.1' // Firebase Crashlytics
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0" // Kotlin plugin
+        classpath 'dev.flutter:flutter-gradle-plugin:1.12.0' // Flutter Gradle plugin
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://storage.googleapis.com/download.flutter.io' // Flutter repository
+        }
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
